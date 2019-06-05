@@ -42,14 +42,10 @@ exports.updateFactory = async function(factory){
     return false;
   }
 
-  console.log(oldFactory);
-
   oldFactory.name = factory.name;
   oldFactory.lowerRange = factory.lowerRange;
   oldFactory.upperRange = factory.upperRange;
   oldFactory.children = factory.children;
-
-  console.log(oldFactory);
 
   try{
     var savedFactory = await oldFactory.save();
